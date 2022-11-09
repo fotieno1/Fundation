@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: black;
+            background-color: white;
+        }
+      * {
+        box-sizing: border-box;  
+        padding: 0;
+        margin: 0;
+      }
+        .container {
+            height: 100vh;
+            margin: 0px;
+            padding: 0px;
+            display: grid;
+            grid-template-columns: repeat(100,1fr);
+            grid-template-rows: repeat(100,1fr) ;
+            gap: 1px;
+        }
+        
+        .Kenya{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-left: 4em;
+          padding-top: 0em;
+        }
+        .Western {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-left: 4em;
+          margin: 1em;
+        }
+    h1 {
+        text-shadow: 2px 2px 5px rgb(92, 79, 79);
+        font-size: 3vw;
+        padding: 0px;
+        margin: 0px;
+      }
+      img {
+  max-width: 100%;
+  height: auto;
+}
+      .item:nth-of-type(1){
+            grid-column: 2/99;
+            grid-row: 1/21;
+            padding: 0px;
+            border-style: outset;
+            margin: 0px;
+            text-align: center; 
+            background-color: aquamarine;
+        }
+        .item:nth-of-type(2){
+            grid-column: 2/12;
+            grid-row: 22/40;
+            text-align: center; 
+            z-index: 9999;
+      background-color: white; 
+        }
+        .item:nth-of-type(3){
+            grid-column: 12/99;
+            grid-row:21/40;
+            text-align: center; 
+            align-items: center;
+            font-size: 1.7vw;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+           
+            background-color: white;
+        }
+            ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+.left {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 2vw;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: left;
+  padding-left: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  
+}
+.right{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 2vw;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: right;
+  padding-right: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.item:nth-of-type(7) li {
+    display: flex;
+    flex-direction: column;
+    z-index: 99999;
+}
+
+li {
+  float: left;
+  z-index: 99999;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: black;
+  z-index: 99999;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+  z-index: 99999;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9e9898;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 99999;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  z-index: 99999;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  z-index: 999999;
+  background-color: #18c970;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.item:nth-of-type(4){
+            grid-column: 2/22;
+            grid-row: 35/40;
+            padding: 0px;
+            margin: 0px;
+            z-index: 9999; 
+            text-align: center; 
+            font-weight: bold;
+            font-size: 1.5vw;
+            color: white;
+            background-color: black
+        }      
+        .item:nth-of-type(5){
+            grid-column: 23/73;
+            grid-row:35/40;
+            padding: 0px;
+            font-weight: bold;
+            font-size: 1.5vw;
+            margin: 0px;
+            z-index: 9999; 
+            text-align: center; 
+            color: black;
+            background-color: aquamarine;
+        }    
+        .item:nth-of-type(6){
+            grid-column: 75/99;
+            grid-row: 35/40;
+            padding: 0px;
+            margin: 0px;
+            z-index: 9999;  
+            text-align: center; 
+            font-weight: bold;
+            font-size: 1.5vw;
+            color: white;
+            background-color: rgb(8, 8, 8);
+        }   
+        .item:nth-of-type(7){
+            grid-column: 2/22;
+            grid-row: 42/97;
+            padding: 0px;
+            margin: 0px;
+            
+            display: flex;
+            flex-direction: column;
+            text-align: center; 
+            color: black;
+            background-color: aquamarine;
+           
+        }  
+        
+        .item:nth-of-type(8){
+            grid-column: 23/49;
+            grid-row: 42/97;
+            padding: 0px;
+            margin: 0px;
+            }
+        .item:nth-of-type(9){
+            grid-column: 51/73;
+            grid-row: 42/97;
+            padding: 0px;
+            margin: 0px;
+            display: grid;
+            row-gap: 1em;
+            align-content: center;
+           
+            width: 100%;
+            
+            background-color: rgb(231, 225, 235);
+        }
+       
+        .item:nth-of-type(10){
+            grid-column: 75/99;
+            grid-row:40/97;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            text-align: center; 
+            color: black;
+            background-color: aquamarine;
+        }
+           .item:nth-of-type(11){
+            grid-column: 2/22;
+            grid-row: 98/99;
+            padding: 0px;
+            margin: 0px;
+            z-index: 99999;
+            text-align: center; 
+            color: black;
+            background-color: black;
+        }    
+        .item:nth-of-type(12){
+            grid-column:24/70;
+            grid-row: 98/99;
+            padding: 0px;
+            margin: 0px;
+            z-index: 9999;
+            font-size: 1vw;
+            text-align: center;
+            font-style: italic; 
+            color: black;
+            background-color: aquamarine;
+        }    
+        .item:nth-of-type(13){
+            grid-column: 75/99;
+            grid-row: 98/99;
+            padding: 0px;
+            margin: 0px;
+            z-index: 9999;
+            text-align: center; 
+            color: black;
+            background-color:black;
+        }    
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="item"> <h1>Economic Awakening and Poverty Eradication Foundation (EAPEF)</h1></div>
+       <div class="item"><img src="./Images/EAPEF.png" alt="Logo" height="10em"  ></div>
+       <div class="item">
+        <ul >
+          <li><a href="./HTML/About.html">About</a></li>
+          
+        
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Investment</a>
+            <div class="dropdown-content">
+              <a href="./Images/EAPEF-Boats.png">Fishing</a>
+              <a href="./Images/EAPEF-Boda.png">Transport</a>
+              <a href="./Images/EAPEF-Market.png">Transport</a>
+              <a href="./Images/EAPEF-Poultry.png">Poultry</a>
+              <a href="./Images/EAPEF-STAIRS.png"><img src="./EAPEF-Mason.png" alt="Mason">  Construction</a>
+            </div>
+          </li>
+        <li><a href="#"></a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Farming</a>
+            <div class="dropdown-content">
+              <a href="./Images/IMG_0655.JPG">Methods</a>
+              <a href="./agregate.html"><img src="./Images/EAPEF-Sale.png" alt="">   Aggregation</a>
+              <a href="./EAPEF-Mason.png">Animals</a>
+              <a href="./Images/EAPEF-Sell.png"><img src="./Images/EAPEF-Market2.png" alt="">  Sales</a>
+            </div>
+          </li>
+        <li><a href="#"></a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Technology</a>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </li>
+        
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Information</a>
+            <div class="dropdown-content">
+              <a href="./Images/EAPEF-Health.png">Food</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Health</a>
+            <div class="dropdown-content">
+              <a href="./edu.png">Education</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Policy</a>
+            <div class="dropdown-content">
+              <a href="./Images/IMG_1062.JPG">Schools</a>
+              <a href="./Images/EAPEF-School.png">Buildings</a>
+              <a href="./EAPEF-Policy.png">Disabled</a>
+              <a href="./Images/EAPEF-Policy2.png">Children</a>
+              <a href="./Images/EAPEFGender.png"></a>
+            </div>
+          </li>
+        
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Gender</a>
+            <div class="dropdown-content">
+              <a href="./Images/EAPEF-Family.png">Families</a>
+              <a href="./Images/EAPEF-Gender-girls.png">Girls</a>
+              <a href="./Images/EAPEF-Youth.png">Boys</a>
+            </div>
+          </li>
+        
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Youth</a>
+            <div class="dropdown-content">
+              <a href="./Images/EAPEF-Youth.png">Feeeding</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </li>
+      </ul>
+       </div>
+       <div class="item">Contact</div>
+       <div class="item">Click dot for details</div>
+       <div class="item">Your Idea</div>
+       <div class="item">
+        <ul class="left" >
+            <li>News</li>
+            <li> Education </li>
+            <li> Achievement</li>
+            <li> Embassies</li>
+            <li> Forecasts </li>
+            <li> Climate change</li>
+            <li> Migration</li>
+        </ul> 
+        
+       </div>
+       <div class="item"> <img src="./Images/Africa.png" alt="Africa" width="390em" ></div>
+       <div class="item"><div class="flex-container"><img  class="Kenya" src="./Images/Kenya.png" alt="Kenya"  width="200m"><img  class="Western" src="./Images/Western.png" alt="Western" height="150em"></div></div>
+        
+       <div class="item">
+        <ul class="right">
+            <li>Stories  </li>
+            <li>Visit </li>
+            <li>Resources</li>  
+            <li>Sports </li>
+            <li>Cultures </li>
+            <li>Poverty </li>
+            <li>Slavery</li>
+         </ul>      
+       </div>
+       <div class="item">  <img   src="./Images/Foundation-Bird.png" alt="Bird"  width="25em" height="25em"></div>
+       <div class="item"> <h3> Freedom & Opportunities</h3></div>
+       <div class="item"> <img  src="./Images/Foundation-Bird2.png" alt="Bird" width="25em" height="25em" ></div>
+         
+   </div> 
+</body>
+</html>
